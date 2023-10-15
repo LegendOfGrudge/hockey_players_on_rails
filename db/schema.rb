@@ -10,7 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_15_210542) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_15_215243) do
+  create_table "player_performances", force: :cascade do |t|
+    t.integer "player_id", null: false
+    t.integer "season_id", null: false
+    t.integer "evGoals"
+    t.integer "evPoints"
+    t.decimal "faceoffWinPct"
+    t.integer "gameWinningGoals"
+    t.integer "gamesPlayed"
+    t.integer "goals"
+    t.integer "otGoals"
+    t.integer "penaltyMinutes"
+    t.integer "plusMinus"
+    t.integer "points"
+    t.decimal "pointsPerGame"
+    t.integer "ppGoals"
+    t.integer "ppPoints"
+    t.integer "shGoals"
+    t.decimal "shootingPct"
+    t.integer "shots"
+    t.decimal "timeOnIcePerGame"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_player_performances_on_player_id"
+    t.index ["season_id"], name: "index_player_performances_on_season_id"
+  end
+
   create_table "players", force: :cascade do |t|
     t.string "lastName"
     t.string "skaterFullName"
@@ -41,6 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_15_210542) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "player_performances", "players"
+  add_foreign_key "player_performances", "seasons"
   add_foreign_key "team_players", "players"
   add_foreign_key "team_players", "teams"
 end

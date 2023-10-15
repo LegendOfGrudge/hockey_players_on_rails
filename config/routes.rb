@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get "/teams", to: "teams#index"
   get "/seasons", to: "seasons#index"
   get "/players", to: "players#index"
+  get "/player_performance", to: "player_performance#index"
 end
