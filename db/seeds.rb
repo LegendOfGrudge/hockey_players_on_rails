@@ -13,11 +13,15 @@ require 'uri'
 require 'net/http'
 require 'json'
 
+Season.delete_all
 Team.delete_all
 
 uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=[{"property":"points","direction":"DESC"},{"property":"goals","direction":"DESC"},{"property":"assists","direction":"DESC"},{"property":"playerId","direction":"ASC"}]&start=0&limit=200&factCayenneExp=gamesPlayed>=1&cayenneExp=gameTypeId=2 and seasonId<=20222023 and seasonId>=20222023')
 res = Net::HTTP.get_response(uri)
 data = JSON.parse(res.body)
+
+Season.create(years: "2022-2023")
+
 data["data"].each do |player|
   teams = player["teamAbbrevs"].split(",").map(&:strip)
 
@@ -26,4 +30,5 @@ data["data"].each do |player|
   end
 end
 
+puts "Created #{Season.count} Seasons"
 puts "Created #{Team.count} Teams"
