@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   get "/teams", to: "teams#index"
   get "/seasons", to: "seasons#index"
+  get "/players", to: "players#index"
 end

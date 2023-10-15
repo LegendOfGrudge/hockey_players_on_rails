@@ -15,15 +15,22 @@ require 'json'
 
 Season.delete_all
 Team.delete_all
-
-uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=[{"property":"points","direction":"DESC"},{"property":"goals","direction":"DESC"},{"property":"assists","direction":"DESC"},{"property":"playerId","direction":"ASC"}]&start=0&limit=200&factCayenneExp=gamesPlayed>=1&cayenneExp=gameTypeId=2 and seasonId<=20222023 and seasonId>=20222023')
-res = Net::HTTP.get_response(uri)
-data = JSON.parse(res.body)
+Player.delete_all
 
 Season.create(years: "2022-2023")
 
-data["data"].each do |player|
-  teams = player["teamAbbrevs"].split(",").map(&:strip)
+uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=[{"property":"points","direction":"DESC"},{"property":"goals","direction":"DESC"},{"property":"assists","direction":"DESC"},{"property":"playerId","direction":"ASC"}]&start=0&limit=100&factCayenneExp=gamesPlayed>=1&cayenneExp=gameTypeId=2 and seasonId<=20222023 and seasonId>=20222023')
+res = Net::HTTP.get_response(uri)
+data = JSON.parse(res.body)
+
+data["data"].each do |player_data|
+  player = Player.create(
+    lastName: player_data["lastName"],
+    skaterFullName: player_data["skaterFullName"],
+    positionCode: player_data["positionCode"],
+    shootsCatches: player_data["shootsCatches"]
+  )
+  teams = player_data["teamAbbrevs"].split(",").map(&:strip)
 
   teams.each do |team_name|
     team = Team.find_or_create_by(teamAbbrevs: team_name)
@@ -32,3 +39,25 @@ end
 
 puts "Created #{Season.count} Seasons"
 puts "Created #{Team.count} Teams"
+puts "Created #{Player.count} Players"
+
+uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=[{"property":"points","direction":"DESC"},{"property":"goals","direction":"DESC"},{"property":"assists","direction":"DESC"},{"property":"playerId","direction":"ASC"}]&start=100&limit=100&factCayenneExp=gamesPlayed>=1&cayenneExp=gameTypeId=2 and seasonId<=20222023 and seasonId>=20222023')
+res = Net::HTTP.get_response(uri)
+data = JSON.parse(res.body)
+
+data["data"].each do |player_data|
+  player = Player.create(
+    lastName: player_data["lastName"],
+    skaterFullName: player_data["skaterFullName"],
+    positionCode: player_data["positionCode"],
+    shootsCatches: player_data["shootsCatches"]
+  )
+  teams = player_data["teamAbbrevs"].split(",").map(&:strip)
+
+  teams.each do |team_name|
+    team = Team.find_or_create_by(teamAbbrevs: team_name)
+  end
+end
+
+puts "Created #{Team.count} Teams"
+puts "Created #{Player.count} Players"
