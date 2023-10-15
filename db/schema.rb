@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_15_204740) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_15_210542) do
   create_table "players", force: :cascade do |t|
     t.string "lastName"
     t.string "skaterFullName"
@@ -26,10 +26,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_15_204740) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "team_players", force: :cascade do |t|
+    t.integer "team_id", null: false
+    t.integer "player_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_team_players_on_player_id"
+    t.index ["team_id"], name: "index_team_players_on_team_id"
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string "teamAbbrevs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "team_players", "players"
+  add_foreign_key "team_players", "teams"
 end
