@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :teams
   resources :seasons
   resources :players
-  resources :player_performances
+  resources :player_performance
 end

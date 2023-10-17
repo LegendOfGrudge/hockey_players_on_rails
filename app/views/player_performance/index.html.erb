@@ -1,2 +1,48 @@
-<h1>PlayerPerformance#index</h1>
-<p>Find me in app/views/player_performance/index.html.erb</p>
+<h1>All Player Stats: (2022-2023)</h1>
+
+<table>
+  <tr>
+    <th>Player:</th>
+    <th>Season:</th>
+    <th>Even Strength Goals:</th>
+    <th>Even Strength Points:</th>
+    <th>Faceoff Win Percentage:</th>
+    <th>Game Winning Goals:</th>
+    <th>Games Played:</th>
+    <th>Goals:</th>
+    <th>Overtime Goals:</th>
+    <th>Penalty Minutes:</th>
+    <th>Plus/Minus:</th>
+    <th>Points:</th>
+    <th>Points Per Game:</th>
+    <th>Power Play Goals:</th>
+    <th>Power Play Points:</th>
+    <th>Shootout Goals:</th>
+    <th>Shooting Percentage:</th>
+    <th>Shots:</th>
+    <th>Time On Ice Per Game:</th>
+  </tr>
+  <% @playerPerformances.each do |perf| %>
+    <tr>
+      <td><%= link_to perf.player.skaterFullName, perf.player %></td>
+      <td><%= perf.season.years %></td>
+      <td><%= perf.evGoals %></td>
+      <td><%= perf.evPoints %></td>
+      <td><%= perf.faceoffWinPct %></td>
+      <td><%= perf.gameWinningGoals %></td>
+      <td><%= perf.gamesPlayed %></td>
+      <td><%= perf.goals %></td>
+      <td><%= perf.otGoals %></td>
+      <td><%= perf.penaltyMinutes %></td>
+      <td><%= perf.plusMinus %></td>
+      <td><%= perf.points %></td>
+      <td><%= perf.pointsPerGame %></td>
+      <td><%= perf.ppGoals %></td>
+      <td><%= perf.ppPoints %></td>
+      <td><%= perf.shGoals %></td>
+      <td><%= perf.shootingPct %></td>
+      <td><%= perf.shots %></td>
+      <td><%= perf.timeOnIcePerGame %></td>
+    </tr>
+  <% end %>
+</table>
