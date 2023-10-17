@@ -3,3 +3,48 @@
 <h3>Position: <%= @player.positionCode %></h3>
 
 <h3>Shoots: <%= @player.shootsCatches %></h3>
+
+<table>
+  <tr>
+    <th>Season:</th>
+    <th>Even Strength Goals:</th>
+    <th>Even Strength Points:</th>
+    <th>Faceoff Win Percentage:</th>
+    <th>Game Winning Goals:</th>
+    <th>Games Played:</th>
+    <th>Goals:</th>
+    <th>Overtime Goals:</th>
+    <th>Penalty Minutes:</th>
+    <th>Plus/Minus:</th>
+    <th>Points:</th>
+    <th>Points Per Game:</th>
+    <th>Power Play Goals:</th>
+    <th>Power Play Points:</th>
+    <th>Shootout Goals:</th>
+    <th>Shooting Percentage:</th>
+    <th>Shots:</th>
+    <th>Time On Ice Per Game:</th>
+  </tr>
+  <% @performances.each do |perf| %>
+    <tr>
+      <td><%= perf.season.years %></td>
+      <td><%= perf.evGoals %></td>
+      <td><%= perf.evPoints %></td>
+      <td><%= perf.faceoffWinPct %></td>
+      <td><%= perf.gameWinningGoals %></td>
+      <td><%= perf.gamesPlayed %></td>
+      <td><%= perf.goals %></td>
+      <td><%= perf.otGoals %></td>
+      <td><%= perf.penaltyMinutes %></td>
+      <td><%= perf.plusMinus %></td>
+      <td><%= perf.points %></td>
+      <td><%= perf.pointsPerGame %></td>
+      <td><%= perf.ppGoals %></td>
+      <td><%= perf.ppPoints %></td>
+      <td><%= perf.shGoals %></td>
+      <td><%= perf.shootingPct %></td>
+      <td><%= perf.shots %></td>
+      <td><%= perf.timeOnIcePerGame %></td>
+    </tr>
+  <% end %>
+</table>

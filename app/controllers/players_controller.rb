@@ -5,5 +5,6 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+    @performances = PlayerPerformance.where(:player_id => params[:id])
   end
 end
