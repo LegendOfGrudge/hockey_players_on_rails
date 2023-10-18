@@ -85,3 +85,13 @@ uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&i
 res = Net::HTTP.get_response(uri)
 data = JSON.parse(res.body)
 generate_data(data)
+
+uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=[{"property":"points","direction":"DESC"},{"property":"goals","direction":"DESC"},{"property":"assists","direction":"DESC"},{"property":"playerId","direction":"ASC"}]&start=200&limit=100&factCayenneExp=gamesPlayed>=1&cayenneExp=gameTypeId=2 and seasonId<=20222023 and seasonId>=20222023')
+res = Net::HTTP.get_response(uri)
+data = JSON.parse(res.body)
+generate_data(data)
+
+uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=[{"property":"points","direction":"DESC"},{"property":"goals","direction":"DESC"},{"property":"assists","direction":"DESC"},{"property":"playerId","direction":"ASC"}]&start=300&limit=100&factCayenneExp=gamesPlayed>=1&cayenneExp=gameTypeId=2 and seasonId<=20222023 and seasonId>=20222023')
+res = Net::HTTP.get_response(uri)
+data = JSON.parse(res.body)
+generate_data(data)
