@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :seasons
   resources :players
   resources :player_performance
+  get "/about", to: "about#index"
 end

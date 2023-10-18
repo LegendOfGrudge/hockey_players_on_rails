@@ -1,2 +1,8 @@
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
+<h1>About</h1>
+<br/>
+<h3>Data Source #1:</h3>
+<p>An nhlteam.csv file is the first data source that includes all teams with their city, name/title associated with the city and an abbreviation of the team. This will be used to populate the Team table so that the abbreviation listed on a player’s data will link them to their respective team.</p>
+<br/>
+<h3>Data Source #2:</h3>
+<p>The NHL API is used throughout their website but it not documented for public use. By searching their own site to find a dropdown of all players listed by points, we stole the API call they used with all headers filled out. The response gives a JSON list of players in descending order of points. We can break down the necessary data into the player’s basic stats like their name, position, and which hand they shoot from for their player data. Then a player’s statistics outside of that will be linked by season to the player with the rest of the statistics given so that their statistics will be listed by season and will not be permanently linked to the player’s profile. This allows the user to switch between different seasons while keeping the players intact and to see a breakdown of a player’s statistics per season on the player’s profile.</p>
+<br/>
