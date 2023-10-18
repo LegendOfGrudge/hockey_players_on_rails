@@ -11,6 +11,7 @@
 require 'uri'
 require 'net/http'
 require 'json'
+require "csv"
 
 def generate_data(data)
   season = Season.find_or_create_by(years: "2022-2023")
@@ -61,6 +62,19 @@ Season.delete_all
 TeamPlayer.delete_all
 Team.delete_all
 Player.delete_all
+
+csv_file = Rails.root.join('db/nhlteam.csv')
+csv_data = File.read(csv_file)
+
+teams = CSV.parse(csv_data, headers: true)
+
+teams.each do |team|
+  newTeam = Team.create(
+    city: team['city'],
+    title: team['title'],
+    teamAbbrevs: team['abbrev']
+  )
+end
 
 uri = URI('https://api.nhle.com/stats/rest/en/skater/summary?isAggregate=false&isGame=false&sort=[{"property":"points","direction":"DESC"},{"property":"goals","direction":"DESC"},{"property":"assists","direction":"DESC"},{"property":"playerId","direction":"ASC"}]&start=0&limit=100&factCayenneExp=gamesPlayed>=1&cayenneExp=gameTypeId=2 and seasonId<=20222023 and seasonId>=20222023')
 res = Net::HTTP.get_response(uri)

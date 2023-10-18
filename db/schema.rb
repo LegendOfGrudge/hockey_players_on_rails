@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_15_215243) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_18_192944) do
   create_table "player_performances", force: :cascade do |t|
     t.integer "player_id", null: false
     t.integer "season_id", null: false
@@ -65,6 +65,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_15_215243) do
     t.string "teamAbbrevs"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "city"
+    t.string "title"
   end
 
   add_foreign_key "player_performances", "players"
