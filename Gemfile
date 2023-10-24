@@ -46,6 +46,8 @@ gem 'bootstrap', '~> 4.3.1'
 
 gem 'excon'
 
+gem 'kaminari'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
