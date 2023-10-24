@@ -1,0 +1,16 @@
+<h1><%= @team.city %> <%= @team.title %> (<%= @team.teamAbbrevs %>)</h1>
+
+<table>
+  <tr>
+    <th>Player:</th>
+    <th>Position:</th>
+    <th>Shoots:</th>
+  </tr>
+  <% @players.each do |play| %>
+    <tr>
+      <td><%= link_to play.player.skaterFullName, play.player %></td>
+      <td><%= play.player.positionCode %></td>
+      <td><%= play.player.shootsCatches %></td>
+    </tr>
+  <% end %>
+</table>

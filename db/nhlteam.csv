@@ -1,0 +1,33 @@
+team_id,city,title,abbrev
+nhl01,Anaheim,Ducks,ANA
+nhl02,Boston,Bruins,BOS
+nhl03,Buffalo,Sabres,BUF
+nhl04,Calgary,Flames,CGY
+nhl05,Carolina,Hurricanes,CAR
+nhl06,Chicago,Blackhawks,CHI
+nhl07,Colorado,Avalanche,COL
+nhl08,Columbus,Blue Jackets,CBJ
+nhl09,Dallas,Stars,DAL
+nhl10,Detroit,Red Wings,DET
+nhl11,Edmonton,Oilers,EDM
+nhl12,Florida,Panthers,FLA
+nhl13,Los Angeles,Kings,LAK
+nhl14,Minnesota,Wild,MIN
+nhl15,Montreal,Canadiens,MTL
+nhl16,Nashville,Predators,NSH
+nhl17,New Jersey,Devils,NJD
+nhl18,New York,Islanders,NYI
+nhl19,New York,Rangers,NYR
+nhl20,Ottawa,Senators,OTT
+nhl21,Philadelphia,Flyers,PHI
+nhl22,Arizona,Coyotes,ARI
+nhl23,Pittsburgh,Penguins,PIT
+nhl24,San Jose,Sharks,SJS
+nhl25,Seattle,Kraken,SEA
+nhl26,St. Louis,Blues,STL
+nhl27,Tampa Bay,Lightning,TBL
+nhl28,Toronto,Maple Leafs,TOR
+nhl29,Vancouver,Canucks,VAN
+nhl30,Vegas,Golden Knights,VGK
+nhl31,Washington,Capitals,WSH
+nhl32,Winnipeg,Jets,WPG

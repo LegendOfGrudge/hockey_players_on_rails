@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lastName: MyString
+  skaterFullName: MyString
+  positionCode: MyString
+  shootsCatches: MyString
+
+two:
+  lastName: MyString
+  skaterFullName: MyString
+  positionCode: MyString
+  shootsCatches: MyString

@@ -1,0 +1,7 @@
+<h1>All Teams</h1>
+
+<ul>
+  <% @teams.each do |team| %>
+    <li><%= link_to team.city, team %></li>
+  <% end %>
+</ul>

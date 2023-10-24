@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: one
+  season: one
+  evGoals: 1
+  evPoints: 1
+  faceoffWinPct: 9.99
+  gameWinningGoals: 1
+  gamesPlayed: 1
+  goals: 1
+  otGoals: 1
+  penaltyMinutes: 1
+  plusMinus: 1
+  points: 1
+  pointsPerGame: 9.99
+  ppGoals: 1
+  ppPoints: 1
+  shGoals: 1
+  shootingPct: 9.99
+  shots: 1
+  timeOnIcePerGame: 9.99
+
+two:
+  player: two
+  season: two
+  evGoals: 1
+  evPoints: 1
+  faceoffWinPct: 9.99
+  gameWinningGoals: 1
+  gamesPlayed: 1
+  goals: 1
+  otGoals: 1
+  penaltyMinutes: 1
+  plusMinus: 1
+  points: 1
+  pointsPerGame: 9.99
+  ppGoals: 1
+  ppPoints: 1
+  shGoals: 1
+  shootingPct: 9.99
+  shots: 1
+  timeOnIcePerGame: 9.99
