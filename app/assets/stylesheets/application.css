@@ -71,3 +71,37 @@ tr:nth-child(odd) {
   justify-content: center;
   align-items: center;
 }
+
+.nav-bar {
+  background-color: #333; /* Background color for the navbar */
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pushes elements to both ends of the navbar */
+}
+
+.nav-list li {
+  margin: 0 10px; /* Adjust margins as needed */
+  color: #fff; /* Text color for navbar items */
+}
+
+/* Style the search input and button */
+.nav-list li input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px; /* Adjust margin as needed */
+}
+
+.nav-list li input[type="submit"] {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}

@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :players
   resources :player_performance
   get "/about", to: "about#index"
+  get 'search', to: 'search#search'
 end

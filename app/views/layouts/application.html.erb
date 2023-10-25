@@ -12,17 +12,21 @@
 
   <body>
   <div class="nav_bar">
-  <nav>
+    <nav>
 
-  <ul>
-    <li><%= link_to 'Home', root_path %></li>
-    <li><%= link_to 'About', about_path %></li>
-    <li><%= link_to 'Teams', teams_path %></li>
-    <li><%= link_to 'Players', player_performance_index_path %></li>
+    <ul class="nav-list">
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'About', about_path %></li>
+      <li><%= link_to 'Teams', teams_path %></li>
+      <li><%= link_to 'Players', player_performance_index_path %></li>
+      <li><%= form_tag search_path, method: :get do %>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search" %>
+  <% end %>
+  </li>
+    </ul>
 
-  </ul>
-
-</nav>
+  </nav>
 </div>
   <%= yield %>
   </body>
