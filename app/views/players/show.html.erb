@@ -4,6 +4,14 @@
 
 <h3>Shoots: <%= @player.shootsCatches %></h3>
 
+<h3>Played For:</h3>
+
+<ul>
+  <% @teams.each do |t| %>
+    <li><%= link_to "#{t.team.city} #{t.team.title}", t.team %></li>
+  <% end %>
+</ul>
+<br/>
 <table>
   <tr>
     <th>Season:</th>

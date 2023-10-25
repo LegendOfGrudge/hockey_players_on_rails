@@ -1,5 +1,5 @@
 class PlayerPerformanceController < ApplicationController
   def index
-    @playerPerformances = PlayerPerformance.all
+    @playerPerformances = PlayerPerformance.page params[:page]
   end
 end
