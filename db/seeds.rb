@@ -72,7 +72,9 @@ teams.each do |team|
   newTeam = Team.create(
     city: team['city'],
     title: team['title'],
-    teamAbbrevs: team['abbrev']
+    teamAbbrevs: team['abbrev'],
+    arena: team['arena'],
+    address: team['address']
   )
 end
 

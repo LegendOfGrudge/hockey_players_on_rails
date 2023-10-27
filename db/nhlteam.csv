@@ -1,33 +1,33 @@
-team_id,city,title,abbrev
-nhl01,Anaheim,Ducks,ANA
-nhl02,Boston,Bruins,BOS
-nhl03,Buffalo,Sabres,BUF
-nhl04,Calgary,Flames,CGY
-nhl05,Carolina,Hurricanes,CAR
-nhl06,Chicago,Blackhawks,CHI
-nhl07,Colorado,Avalanche,COL
-nhl08,Columbus,Blue Jackets,CBJ
-nhl09,Dallas,Stars,DAL
-nhl10,Detroit,Red Wings,DET
-nhl11,Edmonton,Oilers,EDM
-nhl12,Florida,Panthers,FLA
-nhl13,Los Angeles,Kings,LAK
-nhl14,Minnesota,Wild,MIN
-nhl15,Montreal,Canadiens,MTL
-nhl16,Nashville,Predators,NSH
-nhl17,New Jersey,Devils,NJD
-nhl18,New York,Islanders,NYI
-nhl19,New York,Rangers,NYR
-nhl20,Ottawa,Senators,OTT
-nhl21,Philadelphia,Flyers,PHI
-nhl22,Arizona,Coyotes,ARI
-nhl23,Pittsburgh,Penguins,PIT
-nhl24,San Jose,Sharks,SJS
-nhl25,Seattle,Kraken,SEA
-nhl26,St. Louis,Blues,STL
-nhl27,Tampa Bay,Lightning,TBL
-nhl28,Toronto,Maple Leafs,TOR
-nhl29,Vancouver,Canucks,VAN
-nhl30,Vegas,Golden Knights,VGK
-nhl31,Washington,Capitals,WSH
-nhl32,Winnipeg,Jets,WPG
+team_id,city,title,abbrev,arena,address
+nhl01,Anaheim,Ducks,ANA,Honda Center,2695 E Katella Ave Anaheim CA 92806 USA
+nhl02,Boston,Bruins,BOS,TD Garden,100 Legends Way Boston MA 02114 USA
+nhl03,Buffalo,Sabres,BUF,KeyBank Center,1 Seymour H Knox III Plaza Buffalo NY 14203 USA
+nhl04,Calgary,Flames,CGY,Scotiabank Saddledome,555 Saddledome Rise SE Calgary AB T2G 2W1 Canada
+nhl05,Carolina,Hurricanes,CAR,PNC Arena,1400 Edwards Mill Rd Raleigh NC 27607 USA
+nhl06,Chicago,Blackhawks,CHI,United Center,1901 W Madison St Chicago IL 60612 USA
+nhl07,Colorado,Avalanche,COL,Ball Arena,1000 Chopper Cir Denver CO 80204 USA
+nhl08,Columbus,Blue Jackets,CBJ,Nationwide Arena,200 W Nationwide Blvd Columbus OH 43215 USA
+nhl09,Dallas,Stars,DAL,American Airlines Center,2500 Victory Ave Dallas TX 75219 USA
+nhl10,Detroit,Red Wings,DET,Little Caesars Arena,2645 Woodward Ave Detroit MI 48201 USA
+nhl11,Edmonton,Oilers,EDM,Rogers Place,10220 104 Ave NW Edmonton AB T5J 4Y9 Canada
+nhl12,Florida,Panthers,FLA,FLA Live Arena,1 Panther Pkwy Sunrise FL 33323 USA
+nhl13,Los Angeles,Kings,LAK,Crypto.com Arena,1111 S Figueroa St Los Angeles CA 90015 USA
+nhl14,Minnesota,Wild,MIN,Xcel Energy Center,199 Kellogg Blvd W St. Paul MN 55102 USA
+nhl15,Montreal,Canadiens,MTL,Bell Centre,1909 Avenue des Canadiens-de-Montréal Montreal QC H4B 5G0 Canada
+nhl16,Nashville,Predators,NSH,Bridgestone Arena,501 Broadway Nashville TN 37203 USA
+nhl17,New Jersey,Devils,NJD,Prudential Center,25 Lafayette St Newark NJ 07102 USA
+nhl18,New York,Islanders,NYI,Barclays Center,620 Atlantic Ave Brooklyn NY 11217 USA
+nhl19,New York,Rangers,NYR,Madison Square Garden,4 Pennsylvania Plaza New York NY 10001 USA
+nhl20,Ottawa,Senators,OTT,Canadian Tire Centre,1000 Palladium Dr Ottawa ON K2V 1A5 Canada
+nhl21,Philadelphia,Flyers,PHI,Wells Fargo Center,3601 S Broad St Philadelphia PA 19148 USA
+nhl22,Arizona,Coyotes,ARI,Gila River Arena,9400 W Maryland Ave Glendale AZ 85305 USA
+nhl23,Pittsburgh,Penguins,PIT,PPG Paints Arena,1001 Fifth Ave Pittsburgh PA 15219 USA
+nhl24,San Jose,Sharks,SJS,SAP Center at San Jose,525 W Santa Clara St San Jose CA 95113 USA
+nhl25,Seattle,Kraken,SEA,Kraken Community Iceplex,2344 E 29th St Seattle WA 98112 USA
+nhl26,St. Louis,Blues,STL,Enterprise Center,1401 Clark Ave St. Louis MO 63103 USA
+nhl27,Tampa Bay,Lightning,TBL,Amalie Arena,401 Channelside Dr Tampa FL 33602 USA
+nhl28,Toronto,Maple Leafs,TOR,Scotiabank Arena,40 Bay St Toronto ON M5J 2X2 Canada
+nhl29,Vancouver,Canucks,VAN,Rogers Arena,800 Griffiths Way Vancouver BC V6B 6G1 Canada
+nhl30,Vegas,Golden Knights,VGK,T-Mobile Arena,3780 S Las Vegas Blvd Las Vegas NV 89158 USA
+nhl31,Washington,Capitals,WSH,Capital One Arena,601 F St NW Washington D.C. 20004 USA
+nhl32,Winnipeg,Jets,WPG,Canada Life Center,300 Portage Ave Winnipeg MB R3C 5S4 Canada
