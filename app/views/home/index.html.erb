@@ -4,6 +4,7 @@
   <tr>
     <th>Player:</th>
     <th>Season:</th>
+    <th>Points:</th>
     <th>Even Strength Goals:</th>
     <th>Even Strength Points:</th>
     <th>Faceoff Win Percentage:</th>
@@ -13,7 +14,6 @@
     <th>Overtime Goals:</th>
     <th>Penalty Minutes:</th>
     <th>Plus/Minus:</th>
-    <th>Points:</th>
     <th>Points Per Game:</th>
     <th>Power Play Goals:</th>
     <th>Power Play Points:</th>
@@ -26,6 +26,7 @@
     <tr>
       <td><%= link_to perf.player.skaterFullName, perf.player %></td>
       <td><%= perf.season.years %></td>
+      <td><%= perf.points %></td>
       <td><%= perf.evGoals %></td>
       <td><%= perf.evPoints %></td>
       <td><%= perf.faceoffWinPct %></td>
@@ -35,7 +36,6 @@
       <td><%= perf.otGoals %></td>
       <td><%= perf.penaltyMinutes %></td>
       <td><%= perf.plusMinus %></td>
-      <td><%= perf.points %></td>
       <td><%= perf.pointsPerGame %></td>
       <td><%= perf.ppGoals %></td>
       <td><%= perf.ppPoints %></td>
