@@ -9,6 +9,8 @@
       <li>
         <div class="nav-search">
           <%= form_tag search_path, method: :get do %>
+            <% # Added a category select to find player by the team selected %>
+            <%= collection_select :team, :id, @search_categories, :id, :teamAbbrevs, { include_blank: 'All' }, { class: 'form-control' } %>
             <%= text_field_tag :query, params[:query] %>
             <%= submit_tag "Search" %>
           <% end %>
